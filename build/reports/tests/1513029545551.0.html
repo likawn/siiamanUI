@@ -1,0 +1,290 @@
+<!DOCTYPE html><!-- This [if] will  --><!--[if IE 8]>
+    <html class="no-js ie ie8 lt-ie9" lang="pl">
+ <![endif]--><!--[if IE 9]>
+    <html class="no-js ie ie9" lang="pl">
+<![endif]--><!--[if gt IE 9]>
+    <html class="no-js" lang="pl">
+<![endif]--><!--[if !IE]>--><html xmlns="http://www.w3.org/1999/xhtml" lang="pl" class="js canvas canvastext no-touch geolocation postmessage hashchange history websockets rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csstransitions fontface generatedcontent localstorage applicationcache stylish-select js canvas canvastext no-touch geolocation postmessage hashchange history websockets rgba backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csstransitions fontface generatedcontent localstorage applicationcache"><!--<![endif]--><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Logowanie do serwisu transakcyjnego mBanku" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="Stylesheet" type="text/css" href="/LoginMain/Resources/par_axd/LoginMain?file=ResponsiveLogin%2FStyles%2FResponsiveLogin.css&amp;v=92049c24c6d050b737a6495ceab974ff" />
+    <title>mBank serwis transakcyjny</title>
+</head>
+<body style="">
+    <script type="text/javascript" src="/venezia/veneziaLogin.js?v=16EE0C84"></script>
+    <script type="text/javascript">
+        if (verifyBrowser.UA.browser == 'MSIE' &amp;&amp; verifyBrowser.UA.version &lt; 9) {
+            window.location.href = 'http://www.mbank.pl/?browser=old';
+        }
+    </script>
+
+    <header class="header">
+        
+
+<a href="https://www.mbank.pl/">
+    <img class="header-left" src="/LoginMain/Resources/par_axd/LoginMain?file=Content/Images/mbank-logo-retail.png" width="107" height="40" alt="Link do głównej strony mBank" />
+</a>
+
+        <h1 class="accessible-not-visible">Zaloguj się do serwisu transakcyjnego</h1>
+        <span class="header-left">Zaloguj się do serwisu transakcyjnego</span>
+        <span class="header-right desktop">
+            
+
+    <a href="https://www.mbank.pl/bezpieczenstwo/">
+    <img class="ico-lock" src="/LoginMain/Resources/par_axd/LoginMain?file=Content/Images/lock.png" alt="" />
+    Bezpieczeństwo
+</a>
+
+        </span>
+        <span class="header-right mobile-landscape">
+            
+
+    <a href="https://www.mbank.pl/kontakt/oferta-indywidualna/">
+    <img class="ico-lock" src="/LoginMain/Resources/par_axd/LoginMain?file=Content/Images/kontakt.png" alt="" />
+    Kontakt
+</a>
+
+        </span>
+        <span class="header-right mobile-landscape">
+            
+
+    <a href="https://www.mbank.pl/bezpieczenstwo/">
+    <img class="ico-lock" src="/LoginMain/Resources/par_axd/LoginMain?file=Content/Images/lock.png" alt="" />
+    Bezpieczeństwo
+</a>
+
+        </span>
+    </header>
+    <div class="main">
+        <div class="img-container">
+            
+
+<img src="https://online.mbank.pl/contentcache/logon/responsive_logon_retail/background" alt="" role="presentation" />
+
+
+        </div>
+        <div class="panel">
+            
+
+<div id="retail" class="login expanded login-form scenario-default">
+    <div class="login-container">
+        <form id="loginForm" method="POST" autocomplete="off">
+            <div class="color"></div>
+            <div class="login-content">
+                <div class="title-container">
+                    <h2 class="accessible-not-visible">Klienci indywidualni i firmowi</h2>
+                    <div class="title">Klienci indywidualni i firmowi</div>
+                </div>
+
+                <div class="logged-container" role="alert" aria-live="assertive">
+                    <div class="logged">Zalogowano</div>
+                </div>
+
+                <div class="spinner-container">
+                    <div class="photo spinner"></div>
+                </div>
+
+                <div class="error-container" role="alert">
+                    <div id="errorMessage" class="message"></div>
+                    <div id="errorDetails" class="details"></div>
+                </div>
+
+                <div class="form-container">
+                    <div class="photo-container">
+                        <div class="avatar photo photo-retail" style="background-image: url(https://online.mbank.pl/contentcache/logon/responsive_logon_retail/avatar_retail)"></div>
+                    </div>
+                    <div class="field-container">
+
+                        <div class="form-input">
+                            <input name="userID" id="userID" type="text" maxlength="24" required="" placeholder="Identyfikator" aria-describedby="userIDDescription" autofocus="" autocomplete="off" />
+                            <a tabindex="-1" href="#" aria-label="Wpisz nazwę użytkownika lub 8-cyfrowy numer klienta, lub 16-cyfrowy numer karty płatniczej. Jeżeli logujesz się pierwszy raz skorzystaj z tymczasowego numeru klienta." class="tooltip">
+                                <i>?</i>
+                            </a>
+                            <div class="accessible-not-visible" id="userIDDescription">Wpisz nazwę użytkownika lub 8-cyfrowy numer klienta, lub 16-cyfrowy numer karty płatniczej. Jeżeli logujesz się pierwszy raz skorzystaj z tymczasowego numeru klienta.</div>
+                        </div>
+                        <div class="form-input">
+                            <input name="pass" id="pass" type="password" maxlength="32" required="" placeholder="Hasło" aria-describedby="passDescription" autocomplete="off" />
+                            <a tabindex="-1" href="#" aria-label="Wpisz hasło, którego używasz do logowania w serwisie transakcyjnym mBanku. Pamiętaj, że system rozpoznaje duże i małe litery." class="tooltip">
+                                <i>?</i>
+                            </a>
+                            <div class="accessible-not-visible" id="passDescription">Wpisz hasło, którego używasz do logowania w serwisie transakcyjnym mBanku. Pamiętaj, że system rozpoznaje duże i małe litery.</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="capslockWarning" class="capslock-warning" style="display: none;">Caps Lock włączony</div>
+            </div>
+            <div class="buttons form-buttons">
+                <button id="submitButton" form="loginForm" type="submit" class="btn disabled" disabled="disabled" aria-disabled="true">
+                    Zaloguj się
+                </button>
+            </div>
+            <div class="buttons error-buttons">
+                <button id="reloginBtn" type="submit" class="btn">
+                    Zaloguj się ponownie
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="buttons info-buttons">
+        <a href="https://www.mbank.pl/pomoc/info/bezpieczenstwo/logowanie-odblokowanie.html" target="_blank" class="login-problems-link left">Problem z zalogowaniem?</a>
+        <a href="http://www.nowedemo.mbank.pl/login.html" target="_blank" class="demo-link right desktop">Demo</a>
+        <a href="https://m.mbank.pl" target="_blank" class="mbank-lajt-link right mobile">Wersja lajt</a>
+    </div>
+</div><div id="pb" class="login collapsed">
+    <a href="/pl/LoginPB">
+        <div class="title-container">
+            <h2 class="accessible-not-visible">Private Banking</h2>
+            <div class="title">Private Banking</div>
+        </div>
+        <div class="photo-container">
+            <div class="photo photo-pb" style="background-image: url(https://online.mbank.pl/contentcache/logon/responsive_logon_retail/avatar_pb)"></div>
+        </div>
+    </a>
+</div>
+<div id="corpo" class="login collapsed">
+    <a href="/pl/LoginCompanyNet">
+        <div class="title-container">
+            <h2 class="accessible-not-visible">CompanyNet</h2>
+            <div class="title">CompanyNet</div>
+        </div>
+        <div class="photo-container">
+            <div class="photo photo-corpo" style="background-image: url(https://online.mbank.pl/contentcache/logon/responsive_logon_retail/avatar_corpo)"></div>
+        </div>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="adv-container">
+        <div class="small-adv-placeholder">
+            <div class="adv">
+                
+
+<a href="https://www.mbank.pl/informacje-dla-klienta/indywidualny/post,7969,szkodliwa-aplikacja-atakujaca-smartfony-z-systemem-operacyjnym-android.html" tabindex="-1">
+    <img src="https://online.mbank.pl/contentcache/logon/responsive_logon_retail/adv_mobile" alt="" role="presentation" />
+</a>
+
+            </div>
+        </div>
+        <div class="big-adv-placeholder">
+            <div class="adv desktop">
+                
+
+<a href="https://www.mbank.pl/informacje-dla-klienta/indywidualny/post,7969,szkodliwa-aplikacja-atakujaca-smartfony-z-systemem-operacyjnym-android.html" tabindex="-1">
+    <img src="https://online.mbank.pl/contentcache/logon/responsive_logon_retail/adv" alt="" role="presentation" />
+</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="short-footer-placeholder">
+            <div id="security_and_contact" class="security_panel">
+                <span class="security_and_contact_portrait">
+                    
+
+    <a href="https://www.mbank.pl/kontakt/oferta-indywidualna/">
+    <img class="ico-lock" src="/LoginMain/Resources/par_axd/LoginMain?file=Content/Images/kontakt.png" alt="" />
+    Kontakt
+</a>
+
+                </span>
+                <span class="security_and_contact_portrait">
+                    
+
+    <a href="https://www.mbank.pl/bezpieczenstwo/">
+    <img class="ico-lock" src="/LoginMain/Resources/par_axd/LoginMain?file=Content/Images/lock.png" alt="" />
+    Bezpieczeństwo
+</a>
+
+                </span>
+            </div>
+        </div>
+        <div class="long-footer-placeholder">
+            <div class="security">
+                <div id="log-in-panel-footer-security">
+<h2>mBank ostrzega!</h2>
+<ul>
+<li><span style="color: #000000; font-size: 12px;"><span style="color: #000000;"><strong><a href="https://www.mbank.pl/informacje-dla-klienta/indywidualny/post,7913,falszywe-wiadomosci-e-mail-z-zalacznikiem.html">Wirus atakujący smartfony z systemem Android <span style="color: #000000;">- więcej</span></a></strong></span></span></li>
+</ul>
+<h2>Bezpieczeństwo</h2>
+<ul>
+<li><span style="color: #000000; font-size: 12px;"><strong>1. <span style="color: #000000;"><a href="https://www.mbank.pl/bezpieczenstwo"><span style="color: #000000;">mBank ostrzega! <span style="color: #000000;">- więcej</span></span></a></span></strong></span></li>
+<li><span style="color: #000000; font-size: 12px;"><strong>2. </strong><span style="color: #000000;"><a href="https://www.mbank.pl/bezpieczenstwoPB/zlote-zasady/"><span style="color: #000000;">Złote zasady bezpieczeństwa <span style="color: #000000;">- <strong>więcej</strong></span></span></a></span></span></li>
+<li><span style="color: #000000; font-size: 12px;"><strong>3. </strong><span style="color: #000000;"><a href="https://www.mbank.pl/bezpieczenstwoPB/bezpieczny-komputer/"><span style="color: #000000;">Bezpieczny bank w komputerze <span style="color: #000000;">- <strong>więcej</strong></span></span></a></span></span></li>
+<li><span style="color: #000000; font-size: 12px;"><strong>4.</strong> <a href="https://www.mbank.pl/bezpieczenstwoPB/bezpieczny-telefon/"><span style="color: #000000;"><span style="color: #000000;">Bezpieczny bank w telefonie i na tablecie </span></span></a></span><a href="https://www.mbank.pl/bezpieczenstwoPB/bezpieczny-telefon/"><span style="color: #000000;"><span style="color: #000000;"><span style="color: #000000;">-</span></span><span style="font-size: 12px;"><strong><span style="color: #000000;"> więcej</span></strong></span></span></a></li>
+<li><span style="color: #000000; font-size: 12px;"><strong>5. </strong><span style="color: #000000;"><span style="color: #000000;"><a href="https://www.mbank.pl/bezpieczenstwoPB/bezpieczna-karta/">Bezpieczeństwo kart płatniczych <span style="color: #000000;">- <strong>więcej</strong></span></a></span></span></span></li>
+<li><span style="color: #000000; font-size: 12px;"><strong>6. </strong><span style="color: #000000;"><a href="https://www.mbank.pl/bezpieczenstwoPB/dbalosc-o-bezpieczenstwo/"><span style="color: #000000;">Jak mBank dba o Twoje bezpieczeństwo <span style="color: #000000;">- <strong>więcej</strong></span></span></a></span></span></li>
+<li><span style="color: #000000; font-size: 12px;"><strong>7. </strong><span style="color: #000000;"><a href="https://www.mbank.pl/indywidualny/uslugi/uslugi/mobilna-autoryzacja/"><span style="color: #000000;">Aktywuj Mobilną autoryzację!<span style="color: #000000;"> - <strong>więcej</strong></span></span></a></span></span></li>
+</ul>
+<p><span style="font-size: 12px;"> </span></p>
+</div>
+                	<div id="log-in-panel-footer-contact">
+    <h2>Kontakt</h2>
+
+    <div id="mLine-24h">
+                <div class="mLine-text">
+            <span class="header">mLinia</span>
+            <span class="text">801 300 800</span>
+        </div>
+    </div>
+    <!-- / mLine-24h -->
+</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/venezia/libs.js?v=E35192B0"></script>
+    <script type="text/javascript" src="https://online.mbank.pl/lgres/logos.js"></script>
+    
+
+<script type="text/javascript" src="/LoginMain/Resources/par_axd/LoginMain?file=ResponsiveLogin%2FScripts%2Fmain.built.js&amp;v=92049c24c6d050b737a6495ceab974ff"></script>
+<script type="text/javascript">
+
+
+Ebre.Namespace("Ebre.Venezia.Login");
+Ebre.Venezia.Login.LoginUrl = '/pl/LoginMain/Account/JsonLogin';
+
+
+require(['LoginMain/ResponsiveLogin/Scripts/App'], function(App) {
+    var mobileInfo = {
+        windowsAppUrl: "http://mbank.pl/kampanie/ib-wp.html",
+        windowsConfirmMessage: "Pobierz ze sklepu bezpłatną aplikację mBanku na Windows Phone i korzystaj z bankowości mobilnej jeszcze wygodniej.",
+
+        androidAppUrl: "http://mbank.pl/kampanie/ib-android.html",
+        androidConfirmMessage: "Pobierz ze sklepu bezpłatną aplikację mBanku na Androida i korzystaj z bankowości mobilnej jeszcze wygodniej.",
+
+        appleAppUrl: "http://mbank.pl/kampanie/ib-ios.html",
+        appleConfirmMessage: "Pobierz ze sklepu bezpłatną aplikację mBanku na iOS i korzystaj z bankowości mobilnej jeszcze wygodniej.",
+        
+        
+    }
+    var app = new App();
+    app.initialize('VkBE6ac-Y06kS6xgGgc1Ag==', 'Default', null, null, null, mobileInfo);
+    });
+
+</script>
+
+
+    
+    
+    <script src="/pl/LoginMain/Account/ResponsiveLoginGemius" type="text/javascript"></script>
+
+
+
+</body></html>

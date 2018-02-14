@@ -1,0 +1,9 @@
+TemporaryDataProvider\TemporaryDataProvider.class
+Tests\DemoPageTest.class
+PageObject\DemoLoginPage.class
+PageObject\DemoPage.class
+PageObject\LoginPage.class
+Tests\HomePageTest.class
+Tools\AlphabeticalStringListComparator.class
+PageObject\HomePage.class
+PageObject\SetUp.class
