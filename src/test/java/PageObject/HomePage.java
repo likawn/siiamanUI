@@ -2,10 +2,13 @@ package PageObject;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.Selenide.*;
+import org.openqa.selenium.By;
 
 import java.util.List;
 
-import static TemporaryDataProvider.TemporaryDataProvider.baseUrl;
+import static TemporaryDataProvider.TemporaryDataProvider.login_correct;
+import static TemporaryDataProvider.TemporaryDataProvider.password_correct;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
@@ -18,6 +21,11 @@ public class HomePage {
     private SelenideElement registerLink = $x("//a[contains (@href, 'register')]");
     private SelenideElement recoverLink = $x("//a[contains (@href, 'recover')]");
     private SelenideElement loginHeader = $("h2");
+    private SelenideElement emailInput = $(By.id("emailInput"));
+    private SelenideElement passwordInput = $(By.name("password"));
+
+
+
 
     /**
      * Checks if Logo Element is displayed
@@ -43,6 +51,14 @@ public class HomePage {
     public RegisterPage followRegisterLink() {
         registerLink.followLink();
         return new RegisterPage();
+    }
+
+    public MainPage logInto(){
+        emailInput.setValue(login_correct);
+        passwordInput.setValue(password_correct);
+        loginButton.click();
+        sleep(20000);
+        return new MainPage();
     }
         }
 
