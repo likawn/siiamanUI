@@ -6,8 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static TemporaryDataProvider.TemporaryDataProvider.expectedRestaurantsHeader;
-import static TemporaryDataProvider.TemporaryDataProvider.registerPageHeader;
+import static TemporaryDataProvider.TemporaryDataProvider.*;
 import static Tools.AlphabeticalStringListComparator.compareTwoStringLists;
 import static com.codeborne.selenide.Selenide.close;
 import static org.testng.AssertJUnit.assertEquals;
@@ -18,15 +17,23 @@ public class LoginTest  extends SetUp {
     private MainPage mainPage;
 
 
+
     @BeforeClass
     private void setUp() {
         homePage = openHomePage();
     }
-
+//should check if user after login see the page which is viewable before log out.
     @Test
     private void shouldLogInto(){
         mainPage = homePage.logInto();
-        assertEquals(mainPage.getRestaurantHeader(), expectedRestaurantsHeader);
+        assertEquals(mainPage.getMainPageURL(), baseUrl);
+        assertEquals(mainPage.getMainPageFirstHeader(), expectedMainPageFirstHeader);
+        assertEquals(mainPage.getMainPageSecondHeader(), expectedMainPageSecondHeader);
+        mainPage.areMenuBarElementsClickable();
+        mainPage.checkIfPagesChangesByClickingOnMenuBarElements();
+
+
+
 
     }
 

@@ -1,18 +1,12 @@
 package PageObject;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.Selenide.*;
 import org.openqa.selenium.By;
-
-import java.util.List;
 
 import static TemporaryDataProvider.TemporaryDataProvider.login_correct;
 import static TemporaryDataProvider.TemporaryDataProvider.password_correct;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.url;
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
-import static org.testng.AssertJUnit.assertEquals;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class HomePage {
 
@@ -28,7 +22,7 @@ public class HomePage {
 
 
     /**
-     * Checks if Logo Element is displayed
+     * Checks if Logo Element, Header, Login Button & Recover Link is displayed
      * @return true if displayed
      */
     public boolean isLogoDisplayed() {
@@ -44,7 +38,7 @@ public class HomePage {
     public boolean isRecoverLinkDisplayed(){
         return recoverLink.isDisplayed();
     }
-    /*
+    /**
     * Navigates to register page
     * */
 
@@ -57,7 +51,6 @@ public class HomePage {
         emailInput.setValue(login_correct);
         passwordInput.setValue(password_correct);
         loginButton.click();
-        sleep(20000);
         return new MainPage();
     }
         }

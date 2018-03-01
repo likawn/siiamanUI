@@ -11,7 +11,9 @@ public class TemporaryDataProvider {
     public static String registerPageHeader = "aman rejestracja:";
     public static String login_correct = "automation@pl.sii.eu";
     public static String password_correct = "password";
-    public static String mainPageUrl = baseUrl + "restaurants";
-    public static String expectedRestaurantsHeader = "ZNALEZIONYCH RESTAURACJI";
+    //public static String mainPageUrl = baseUrl + "restaurants";
+    public static String expectedMainPageFirstHeader = "Otwarte zamówienia:";
+    public static String expectedMainPageSecondHeader = "Zamówienia w trakcie realizacji:";
+    public static List<String> expectedUrlFromMenuBar = asList("myOrders", "restaurants", "admin", "contributors", "costsTable");
 
 }
