@@ -1,14 +1,9 @@
 package PageObject;
 
-import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
-import java.util.List;
-
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.*;
 
 public class RegisterPage {
 
@@ -16,9 +11,19 @@ public class RegisterPage {
     private SelenideElement registerButton = $x("//name = 'submit'");
     private SelenideElement registerHeader = $("h2");
 
+    /**
+     * Gets header to check during test if proper header is displayed
+     * @return header as a string
+     */
+
     public String getHeader() {
         return registerHeader.getText();
     }
+
+    /**
+     * Checks if login & register buttons are displayed
+     * @return true if buttons are displayed
+     */
 
     public boolean isBackToLoginButtonDisplayed(){
         return backToLoginButton.isDisplayed();
@@ -27,6 +32,5 @@ public class RegisterPage {
     public boolean isRegisterButtonDisplayed(){
         return registerButton.isDisplayed();
     }
-
 
 }

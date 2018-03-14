@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mBankUI.iml" filepath="$PROJECT_DIR$/mBankUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siiamanUI.iml" filepath="$PROJECT_DIR$/siiamanUI.iml" />
     </modules>
   </component>
 </project>

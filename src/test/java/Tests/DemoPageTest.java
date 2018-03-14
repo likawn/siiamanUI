@@ -1,14 +1,13 @@
 package Tests;
 
-import PageObject.*;
+import PageObject.HomePage;
+import PageObject.RegisterPage;
+import PageObject.SetUp;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static TemporaryDataProvider.TemporaryDataProvider.homePageHeader;
 import static TemporaryDataProvider.TemporaryDataProvider.registerPageHeader;
-import static Tools.AlphabeticalStringListComparator.compareTwoStringLists;
-import static com.codeborne.selenide.Selenide.close;
 import static org.testng.AssertJUnit.assertEquals;
 
 //
@@ -33,7 +32,7 @@ public class DemoPageTest extends SetUp {
 
     @AfterClass
     private void tearDown() {
-        close();
+//        close();
     }
 }
 

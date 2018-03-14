@@ -15,6 +15,7 @@ public class SetUp {
      * Opens local project homepage
      * @return HomePage
      */
+
     public HomePage openHomePage() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         System.setProperty("selenide.browser", "Chrome");

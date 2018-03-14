@@ -1,4 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.136 sec
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 124.42 sec <<< FAILURE!
+shouldLogInto(Tests.LoginTest)  Time elapsed: 27.229 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<http://localhost:8080/siiamanTest/restaurants> but was:<http://localhost:8080/siiamanTest/>
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
+	at Tests.LoginTest.shouldLogInto(LoginTest.java:29)
+
+checkHowManyRestaurants(Tests.RestaurantsPageTest)  Time elapsed: 6.874 sec  <<< FAILURE!
+ListSizeMismatch : expected: = 91, actual: 0, collection: By.xpath: //*[@class ='ui divided items ui segment']/div
+Elements: []
+Screenshot: file:/C:/Users/lwnuk/IdeaProjects/siiamanUI/build/reports/tests/1520409915736.0.png
+Page source: file:/C:/Users/lwnuk/IdeaProjects/siiamanUI/build/reports/tests/1520409915736.0.html
+Timeout: 6 s.
+	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:24)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:99)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:59)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:50)
+	at com.codeborne.selenide.ElementsCollection.shouldHaveSize(ElementsCollection.java:35)
+	at PageObject.Restaurants.getNumOfRestaurants(Restaurants.java:26)
+	at Tests.RestaurantsPageTest.checkHowManyRestaurants(RestaurantsPageTest.java:27)
+

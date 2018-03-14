@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="TestSuite" time="16.434" errors="0" skipped="0">
+<testsuite tests="3" failures="2" name="TestSuite" time="36.333" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_162\jre\bin"/>
     <property name="java.vm.version" value="25.162-b12"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:/Users/lwnuk/IdeaProjects/mBankUI"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\lwnuk\IdeaProjects\siiamanUI"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\lwnuk\IdeaProjects\mBankUI"/>
+    <property name="user.dir" value="C:\Users\lwnuk\IdeaProjects\siiamanUI"/>
     <property name="java.runtime.version" value="1.8.0_162-b12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_162\jre\lib\endorsed"/>
@@ -27,27 +27,26 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:/Users/lwnuk/apache-maven-3.5.2/bin/m2.conf"/>
+    <property name="classworlds.conf" value="C:\Users\lwnuk\apache-maven-3.5.2\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\lwnuk\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\lwnuk\bin;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\dotnet;C:\Program Files\Git\cmd;C:\Users\lwnuk\apache-maven-3.5.2\bin;C:\Users\lwnuk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
-    <property name="jansi.passthrough" value="true"/>
-    <property name="maven.conf" value="C:/Users/lwnuk/apache-maven-3.5.2/conf"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\lwnuk\apache-maven-3.5.2\bin;C:\Users\lwnuk\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="C:\Users\lwnuk\apache-maven-3.5.2\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:/Users/lwnuk/apache-maven-3.5.2/lib/jansi-native"/>
+    <property name="library.jansi.path" value="C:\Users\lwnuk\apache-maven-3.5.2\bin\..\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\lwnuk"/>
     <property name="user.timezone" value="Europe/Belgrade"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1250"/>
     <property name="user.name" value="lwnuk"/>
-    <property name="java.class.path" value="C:/Users/lwnuk/apache-maven-3.5.2/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.class.path" value="C:\Users\lwnuk\apache-maven-3.5.2\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_162\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="pl"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -55,16 +54,77 @@
     <property name="java.version" value="1.8.0_162"/>
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_162\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_162\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp852"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\lwnuk\apache-maven-3.5.2"/>
+    <property name="maven.home" value="C:\Users\lwnuk\apache-maven-3.5.2\bin\.."/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp852"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Tests.DemoPageTest" name="shouldLoginToDemoVersion" time="5.303"/>
-  <testcase classname="Tests.HomePageTest" name="shouldBeOnHomePage" time="0.035"/>
-  <testcase classname="Tests.HomePageTest" name="checkFirstLineMenu" time="11.096"/>
+  <testcase classname="Tests.DemoPageTest" name="shouldGotoRegisterPage" time="2.23"/>
+  <testcase classname="Tests.LoginTest" name="shouldLogInto" time="27.229">
+    <failure message="expected:&lt;http://localhost:8080/siiamanTest/restaurants&gt; but was:&lt;http://localhost:8080/siiamanTest/&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;http://localhost:8080/siiamanTest/restaurants&gt; but was:&lt;http://localhost:8080/siiamanTest/&gt;
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:101)
+	at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:108)
+	at Tests.LoginTest.shouldLogInto(LoginTest.java:29)
+</failure>
+    <system-err>mar 07, 2018 9:03:21 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer closeWebDriver
+INFO: Close webdriver: 1 -&gt; ChromeDriver: chrome on XP (7a326a9b88398a80dd36904bc3a67f43)
+mar 07, 2018 9:03:21 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer$CloseBrowser run
+INFO: Trying to close the browser ChromeDriver ...
+mar 07, 2018 9:03:22 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer closeWebDriver
+INFO: Closed webdriver in 1311 ms
+Starting ChromeDriver 2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1) on port 10693
+Only local connections are allowed.
+mar 07, 2018 9:03:24 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+mar 07, 2018 9:03:25 AM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
+INFO: BrowserName=chrome Version=64.0.3282.186 Platform=XP
+mar 07, 2018 9:03:25 AM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenide v. 4.8
+mar 07, 2018 9:03:25 AM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
+INFO: Selenium WebDriver v. 3.6.0 build time: 2017-09-27T15:28:36.4Z
+mar 07, 2018 9:03:25 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer createDriver
+INFO: Create webdriver in current thread 1: ChromeDriver -&gt; ChromeDriver: chrome on XP (529a1f4aba93fd38c0bb7ffdeb0db674)
+</system-err>
+  </testcase>
+  <testcase classname="Tests.RestaurantsPageTest" name="checkHowManyRestaurants" time="6.874">
+    <failure message=": expected: = 91, actual: 0, collection: By.xpath: //*[@class =&apos;ui divided items ui segment&apos;]/div
+Elements: []" type="ListSizeMismatch ">ListSizeMismatch : expected: = 91, actual: 0, collection: By.xpath: //*[@class =&apos;ui divided items ui segment&apos;]/div
+Elements: []
+Screenshot: file:/C:/Users/lwnuk/IdeaProjects/siiamanUI/build/reports/tests/1520409915736.0.png
+Page source: file:/C:/Users/lwnuk/IdeaProjects/siiamanUI/build/reports/tests/1520409915736.0.html
+Timeout: 6 s.
+	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:24)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:99)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:59)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:50)
+	at com.codeborne.selenide.ElementsCollection.shouldHaveSize(ElementsCollection.java:35)
+	at PageObject.Restaurants.getNumOfRestaurants(Restaurants.java:26)
+	at Tests.RestaurantsPageTest.checkHowManyRestaurants(RestaurantsPageTest.java:27)
+</failure>
+    <system-err>mar 07, 2018 9:03:53 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer closeWebDriver
+INFO: Close webdriver: 1 -&gt; ChromeDriver: chrome on XP (529a1f4aba93fd38c0bb7ffdeb0db674)
+mar 07, 2018 9:03:53 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer$CloseBrowser run
+INFO: Trying to close the browser ChromeDriver ...
+mar 07, 2018 9:03:55 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer closeWebDriver
+INFO: Closed webdriver in 1159 ms
+Starting ChromeDriver 2.34.522940 (1a76f96f66e3ca7b8e57d503b4dd3bccfba87af1) on port 5672
+Only local connections are allowed.
+mar 07, 2018 9:03:57 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+mar 07, 2018 9:03:58 AM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
+INFO: BrowserName=chrome Version=64.0.3282.186 Platform=XP
+mar 07, 2018 9:03:58 AM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenide v. 4.8
+mar 07, 2018 9:03:58 AM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
+INFO: Selenium WebDriver v. 3.6.0 build time: 2017-09-27T15:28:36.4Z
+mar 07, 2018 9:03:58 AM com.codeborne.selenide.impl.WebDriverThreadLocalContainer createDriver
+INFO: Create webdriver in current thread 1: ChromeDriver -&gt; ChromeDriver: chrome on XP (1e6ab179c00a32560a9f1040e0ff5919)
+</system-err>
+  </testcase>
 </testsuite>

@@ -1,5 +1,5 @@
-# mBankUI
-Lots of fun with mBankUI. Just for training purposes.
+# siiamanUI
+Not really lot of fun with a benchwarmer project. Just for training purposes.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 CLONE REPOSITORY

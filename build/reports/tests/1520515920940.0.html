@@ -1,0 +1,149 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <title>Sii-aman</title>
+    <link href="/siiamanTest/resources/css/semantic.min.css" rel="stylesheet" />
+    <link href="/siiamanTest/resources/css/help-style.css" rel="stylesheet" />
+     <link href="/siiamanTest/resources/css/loader-style.css" rel="stylesheet" />
+    <script src="/siiamanTest/resources/js/jquery-3.1.1.min.js"></script>
+    <script src="/siiamanTest/resources/js/angular.min.js"></script>
+    <script src="/siiamanTest/resources/js/angular-animate.min.js"></script>
+    <script src="/siiamanTest/resources/js/semantic.min.js"></script>
+    <script src="/siiamanTest/resources/js/help-script.js"></script>
+    <script src="/siiamanTest/resources/js/tablesort.js"></script>
+    <script src="/siiamanTest/resources/js/jquery.big-slide.js"></script>
+    
+</head>
+<body>
+	<div class="bg"></div>
+	<div id="content">
+		
+
+
+
+
+
+<div id="mainMenu" class="ui large secondary inverted blue pointing ten item menu">
+	<img src="/siiamanTest/resources/img/beta.png" style="height: 67px;" />
+	<div class=" item" onmousedown="$('#mini-logo').transition('jiggle');" id="index">
+		<a href="/siiamanTest/">
+			<img id="mini-logo" src="/siiamanTest/resources/img/sii-logo.png" width="50px" alt="SII" />aman
+		</a>
+	</div>
+	<a class="active item" href="/siiamanTest/myOrders" id="myOrders">Moje zamówienia</a> 
+	<a class=" item" href="/siiamanTest/restaurants" id="restaurants">Restauracje</a>
+	<a class=" item" href="/siiamanTest/admin" id="admin">Ustawienia</a>
+	
+	<a class=" item" href="/siiamanTest/contributors" id="contributors">Aleja gwiazd</a>
+		<a class=" item" href="/siiamanTest/costsTable" id="costsTable">Tabela rozliczeń</a>
+	<a class="item right" id="inviteToApplication" onclick="$('.modal.inviteToApplicationModal').modal('show');document.activeElement.blur();">Zaproś do aplikacji</a>
+
+	<a class=" item right" href="/siiamanTest/settings" id="settings">
+		automation@pl.sii.eu
+	</a>
+	<div class="item">
+		<form name="logout" action="/siiamanTest/logout" method="post">
+			<input class="ui inverted red button" value="Wyloguj" type="submit" />
+			<input type="hidden" name="_csrf" value="5b278a07-250b-455a-8337-f2b1306e6922" />
+		</form>
+	</div>
+</div>
+<noscript>
+	&lt;div class="sixteen wide column"&gt;
+		&lt;div class="ui error message"&gt;
+			&lt;i class="close icon"&gt;&lt;/i&gt;
+			&lt;p&gt;Twoja przeglądarka ma wyłączoną obsługę javascript. Włącz obsługę i odśwież stronę, aby korzystać ze wszystkich funkcji aplikacji.&lt;/p&gt;
+		&lt;/div&gt;
+ 	&lt;/div&gt;
+</noscript>
+
+
+
+		<div class="ui two column stackable center aligned page grid zero_left_right_padding">
+		    
+
+
+
+
+			<div class="row">
+                <h1 class="shadow">Aktualne zamówienia:</h1>
+            </div>
+			<div class="row">
+			    <div class="sixteen wide column">
+                    <table class="ui selectable sortable green padded table" id="itemsTable">
+                        <thead>
+                            <tr>
+                                <th>Restauracja</th>
+                                <th>Lider</th>
+                                <th>Etap</th>
+                                <th>Otwarte do</th>
+                                <th>Bilans</th>
+                            </tr>
+                        </thead>
+                            <tbody>
+                            
+                                
+                                    
+                                
+                                
+                            
+
+                            <tr>
+                                        <td colspan="5">
+                                            <div class="ui warning center message" align="center">
+                                                <a href="/siiamanTest/restaurants">
+                                                    Nie masz aktualnych zamówień. Kliknij, aby stworzyć zamówienie.
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr></tbody>
+                    </table>
+                </div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+<div id="footer" class="ui vertical footer segment">
+    <div id="deleteItemDiv">
+
+    </div>
+	<div class="ui center aligned container">
+		<p>SIIaman</p>
+		<div class="ui horizontal inverted small divided link">
+		<!-- TODO: not implemented yet -->
+		<!-- <a class="item" href="#"> Mapa strony</a> --> 
+		<a class="item" href="mailto:siiaman-help@pl.sii.eu" target="_blank"> Skontaktuj się z twórcami </a>
+		<!-- <a class="item" href="#"> Polityka Prywatności</a> -->
+		</div>
+	</div>
+	
+	<div class="ui modal inviteToApplicationModal" id="inviteToApplicationModal">
+	    <div class="header">Zaproś do aplikacji</div>
+        <div class="content">
+			<div id="wrongEmails" class="ui negative message hidden" align="center">
+				<i class="close icon"></i>
+				<div class="header">Nie można dodać maila spoza domeną @pl.sii.eu</div>
+				<p>Popraw dane by kontynuować</p>
+			</div>
+			<div class="ui segment form">
+                <h3 class="center">Wybierz osóby, które chcesz zaprosić do aplikacji</h3>
+				<form id="attachUsersToApplicationForm" action="/siiamanTest/inviteToApplication" method="post">
+					<input type="hidden" name="_csrf" value="5b278a07-250b-455a-8337-f2b1306e6922" />
+					<input id="baseUrl" type="hidden" value="/siiamanTest" />
+					<div class="field">
+						<div class="ui fluid search dropdown allowDropdownAdding selection multiple"><select multiple="" id="inviteToApplicationSelect" name="usernameList">
+							<option value="">State</option>
+						</select><i class="dropdown icon"></i><input class="search" autocomplete="off" tabindex="0" /><span class="sizer"></span><span class="sizer"></span><div class="default text">State</div><div class="menu" tabindex="-1"></div></div>
+					</div>
+				</form>
+			</div>
+        </div>
+		<div class="actions">
+		    <div id="inputAttachUsersToApplication" class="ui green button hidden">OK</div>
+			<div class="ui red deny button cancel_button">Anuluj</div>
+		</div>
+	</div>
+</div>
+
+</body></html>

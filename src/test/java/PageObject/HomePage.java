@@ -22,30 +22,45 @@ public class HomePage {
 
 
     /**
-     * Checks if Logo Element, Header, Login Button & Recover Link is displayed
+     * Checks if Logo Element, login button, recover link is displayed
      * @return true if displayed
      */
+
     public boolean isLogoDisplayed() {
         return logo.isDisplayed();
     }
 
-    public String getLoginHeader(){
-        return loginHeader.getText();
-    }
     public boolean isLoginButtonDisplayed(){
         return loginButton.isDisplayed();
     }
+
     public boolean isRecoverLinkDisplayed(){
         return recoverLink.isDisplayed();
     }
+
+    /**
+     * Takes login header to check during test if proper header is displayed
+     * @return header as a string
+     */
+
+    public String getLoginHeader(){
+        return loginHeader.getText();
+    }
+
     /**
     * Navigates to register page
-    * */
+    * @return register page
+    */
 
     public RegisterPage followRegisterLink() {
         registerLink.followLink();
         return new RegisterPage();
     }
+
+    /**
+     * Logs into application
+     * @return Main Page
+     */
 
     public MainPage logInto(){
         emailInput.setValue(login_correct);

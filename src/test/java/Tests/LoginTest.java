@@ -26,11 +26,12 @@ public class LoginTest  extends SetUp {
     @Test
     private void shouldLogInto(){
         mainPage = homePage.logInto();
+        mainPage.AmIinProperPlace();
         assertEquals(mainPage.getMainPageURL(), baseUrl);
         assertEquals(mainPage.getMainPageFirstHeader(), expectedMainPageFirstHeader);
-        assertEquals(mainPage.getMainPageSecondHeader(), expectedMainPageSecondHeader);
         mainPage.areMenuBarElementsClickable();
         mainPage.checkIfPagesChangesByClickingOnMenuBarElements();
+
 
 
 

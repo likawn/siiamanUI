@@ -1,0 +1,358 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title>Sii-aman</title>
+<link href="/siiamanTest/resources/css/semantic.min.css" rel="stylesheet" />
+<link href="/siiamanTest/resources/css/help-style.css" rel="stylesheet" />
+ <link href="/siiamanTest/resources/css/loader-style.css" rel="stylesheet" />
+<script src="/siiamanTest/resources/js/jquery-3.1.1.min.js"></script>
+<script src="/siiamanTest/resources/js/angular.min.js"></script>
+<script src="/siiamanTest/resources/js/angular-animate.min.js"></script>
+<script src="/siiamanTest/resources/js/semantic.min.js"></script>
+<script src="/siiamanTest/resources/js/help-script.js"></script>
+<script src="/siiamanTest/resources/js/tablesort.js"></script>
+<script src="/siiamanTest/resources/js/jquery.big-slide.js"></script>
+
+</head>
+<body>
+	<div class="bg"></div>
+	<div id="content">
+		
+
+
+
+
+
+<div id="mainMenu" class="ui large secondary inverted blue pointing menu">
+	<img src="/siiamanTest/resources/img/beta.png" style="height: 67px;" />
+	<div class="active item" onmousedown="$('#mini-logo').transition('jiggle');" id="index">
+		<a href="/siiamanTest/">
+			<img id="mini-logo" src="/siiamanTest/resources/img/sii-logo.png" width="50px" alt="SII" />aman
+		</a>
+	</div>
+	<a class=" item" href="/siiamanTest/myOrders" id="myOrders">Moje zamówienia</a> 
+	<a class=" item" href="/siiamanTest/restaurants" id="restaurants">Restauracje</a>
+	<a class=" item" href="/siiamanTest/admin" id="admin">Ustawienia</a>
+	
+	<a class=" item" href="/siiamanTest/contributors" id="contributors">Aleja gwiazd</a>
+		<a class=" item" href="/siiamanTest/costsTable" id="costsTable">Tabela rozliczeń</a>
+	<a class="item right" id="inviteToApplication" onclick="$('.modal.inviteToApplicationModal').modal('show');document.activeElement.blur();">Zaproś do aplikacji</a>
+
+	<a class=" item right" href="/siiamanTest/settings" id="settings">
+		automation@pl.sii.eu
+	</a>
+	<div class="item">
+		<form name="logout" action="/siiamanTest/logout" method="post">
+			<input class="ui inverted red button" value="Wyloguj" type="submit" />
+			<input type="hidden" name="_csrf" value="b9190110-0d34-463e-b0d6-605c005677ca" />
+		</form>
+	</div>
+</div>
+<noscript>
+	&lt;div class="sixteen wide column"&gt;
+		&lt;div class="ui error message"&gt;
+			&lt;i class="close icon"&gt;&lt;/i&gt;
+			&lt;p&gt;Twoja przeglądarka ma wyłączoną obsługę javascript. Włącz obsługę i odśwież stronę, aby korzystać ze wszystkich funkcji aplikacji.&lt;/p&gt;
+		&lt;/div&gt;
+ 	&lt;/div&gt;
+</noscript>
+
+
+		<div class="ui one column stackable center aligned page grid">
+		        
+			<div class="row">
+				<h1 class="shadow">Otwarte zamówienia:</h1>
+			</div>
+				
+					
+					
+					<div class="sixteen wide column">
+						<table id="orders" class="ui selectable sortable green padded table">
+							<thead>
+								<tr>
+									<th>Restauracja</th>
+									<th>Lider (Oddział)</th>
+									<th>Utworzono</th>
+									<th>Zakończy się</th>
+									<th class="disabled">Szczegóły</th>
+								</tr>
+								<tr>
+                                    <td>
+                                        <div class="ui fluid input focus">
+                                            <input type="text" onkeyup="jsTableFilter('orders', 4)" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui fluid input focus">
+                                            <input type="text" onkeyup="jsTableFilter('orders', 4)" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui fluid input focus">
+                                            <input type="text" onkeyup="jsTableFilter('orders', 4)" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui fluid input focus">
+                                            <input type="text" onkeyup="jsTableFilter('orders', 4)" />
+                                        </div>
+                                    </td>
+                                    <td class="center aligned">
+                                        <button class="circular ui icon button" onclick="removeInputsTextInRow(this.parentElement, 'orders', 4)">
+                                            <i class="icon red delete"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="noResultsClass" style="display:none;">
+                                    <td colspan="5">
+                                        <div class="ui warning center message" align="center">
+                                            Brak wyników spełniających kryteria.
+                                        </div>
+                                    </td>
+                                </tr>
+							</thead>
+							<tbody>
+
+								
+									
+										
+									
+								
+							<tr>
+											<td><a href="/siiamanTest/restaurant?id=524583&amp;orderId=36332">Tygrys</a></td>
+											<td>pavlo@pl.sii.eu(Sii Lublin)</td>
+											<td>14:59 22/02/18</td>
+											<td>07:59</td>
+											<td class="center aligned">
+												<button class="circular ui icon button" onclick="showOrderDetails(36332)">
+	  												<i class="icon browser"></i>
+												</button>
+											</td>
+										</tr></tbody>
+						</table>
+						</div>
+						<div class="sixteen wide column">
+						<div class="ui blue segment">
+							<p>
+								Te zamówienia Cię nie przekonują? <a href="/siiamanTest/restaurants">Przejrzyj restauracje</a>!
+							</p>
+						</div>
+					</div>
+					
+				
+			
+				<div class="row">
+					<h1 class="shadow">Zamówienia w trakcie realizacji:</h1>
+				</div>
+				<div class="sixteen wide column">
+					<table id="ordersInRealization" class="ui selectable sortable green padded table">
+						<thead>
+						<tr>
+							<th>Restauracja</th>
+							<th>Lider (Oddział)</th>
+							<th>Status</th>
+							<th class="disabled">Szczegóły</th>
+						</tr>
+						<tr>
+                               <td>
+                                   <div class="ui fluid input focus">
+                                       <input type="text" onkeyup="jsTableFilter('ordersInRealization', 3)" />
+                                   </div>
+                               </td>
+                               <td>
+                                   <div class="ui fluid input focus">
+                                       <input type="text" onkeyup="jsTableFilter('ordersInRealization', 3)" />
+                                   </div>
+                               </td>
+                               <td>
+                                   <div class="ui fluid input focus">
+                                       <input type="text" onkeyup="jsTableFilter('ordersInRealization', 3)" />
+                                   </div>
+                               </td>
+                               <td class="center aligned">
+                                   <button class="circular ui icon button" onclick="removeInputsTextInRow(this.parentElement, 'ordersInRealization', 3)">
+                                       <i class="icon red delete"></i>
+                                   </button>
+                               </td>
+                           </tr>
+                           <tr class="noResultsClass" style="display:none;">
+                               <td colspan="4">
+                                   <div class="ui warning center message" align="center">
+                                       Brak wyników spełniających kryteria.
+                                   </div>
+                               </td>
+                           </tr>
+						</thead>
+						<tbody>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=29501">Bada Bing</a>
+								</td>
+								<td>azarzeczny@pl.sii.eu(Sii Lublin)</td>
+								<td>Wysłane</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36152)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=35098">Bar Rabarbar</a>
+								</td>
+								<td>nstodolska@pl.sii.eu(Sii Lublin)</td>
+								<td>Wysłane</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36163)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=524562">Grandeappetito </a>
+								</td>
+								<td>nstodolska@pl.sii.eu(Sii Lublin)</td>
+								<td>Zrealizowane</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36263)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=21948">Kopalnia Smaku </a>
+								</td>
+								<td>nstodolska@pl.sii.eu(Sii Lublin)</td>
+								<td>Zrealizowane</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36266)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=524567">Bar Mała Wyspa </a>
+								</td>
+								<td>nstodolska@pl.sii.eu(Sii Lublin)</td>
+								<td>Zrealizowane</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36269)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=29981">Kwadrans</a>
+								</td>
+								<td>nstodolska@pl.sii.eu(Sii Lublin)</td>
+								<td>Zrealizowane</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36272)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=35019">Burger Store</a>
+								</td>
+								<td>Adam@pl.sii.eu(Sii Lublin)</td>
+								<td>Trwające</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36285)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=17174">Tu Burger </a>
+								</td>
+								<td>Adam@pl.sii.eu(Sii Lublin)</td>
+								<td>Trwające</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36275)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+							<tr>
+								<td>
+								    <a href="/siiamanTest/restaurant?id=35019">Burger Store</a>
+								</td>
+								<td>lsobotka@pl.sii.eu(Sii Lublin)</td>
+								<td>Wysłane</td>
+								<td class="center aligned">
+									<button class="circular ui icon button" onclick="showOrderDetails(36193)">
+ 											<i class="icon browser"></i>
+									</button>
+								</td>
+							</tr>
+						
+						</tbody>
+					</table>
+				</div>
+			
+			</div>
+	</div>
+	<form action="orderDetails" method="post" id="order_details_form">
+		<input type="hidden" name="orderId" id="orderId" value="" />
+		<input type="hidden" name="_csrf" value="b9190110-0d34-463e-b0d6-605c005677ca" />
+	</form>
+	
+
+
+<div id="footer" class="ui vertical footer segment">
+    <div id="deleteItemDiv">
+
+    </div>
+	<div class="ui center aligned container">
+		<p>SIIaman</p>
+		<div class="ui horizontal inverted small divided link">
+		<!-- TODO: not implemented yet -->
+		<!-- <a class="item" href="#"> Mapa strony</a> --> 
+		<a class="item" href="mailto:siiaman-help@pl.sii.eu"> Skontaktuj się z twórcami </a>  
+		<!-- <a class="item" href="#"> Polityka Prywatności</a> -->
+		</div>
+	</div>
+	
+	<div class="ui modal inviteToApplicationModal" id="inviteToApplicationModal">
+	    <div class="header">Zaproś do aplikacji</div>
+        <div class="content">
+			<div id="wrongEmails" class="ui negative message hidden" align="center">
+				<i class="close icon"></i>
+				<div class="header">Nie można dodać maila spoza domeną @pl.sii.eu</div>
+				<p>Popraw dane by kontynuować</p>
+			</div>
+			<div class="ui segment form">
+                <h3 class="center">Wybierz osóby, które chcesz zaprosić do aplikacji</h3>
+				<form id="attachUsersToApplicationForm" action="/siiamanTest/inviteToApplication" method="post">
+					<input type="hidden" name="_csrf" value="b9190110-0d34-463e-b0d6-605c005677ca" />
+					<input id="baseUrl" type="hidden" value="/siiamanTest" />
+					<div class="field">
+						<div class="ui fluid search dropdown allowDropdownAdding selection multiple"><select multiple="" id="inviteToApplicationSelect" name="usernameList">
+							<option value="">State</option>
+						</select><i class="dropdown icon"></i><input class="search" autocomplete="off" tabindex="0" /><span class="sizer"></span><span class="sizer"></span><div class="default text">State</div><div class="menu" tabindex="-1"></div></div>
+					</div>
+				</form>
+			</div>
+        </div>
+		<div class="actions">
+		    <div id="inputAttachUsersToApplication" class="ui green button hidden">OK</div>
+			<div class="ui red deny button cancel_button">Anuluj</div>
+		</div>
+	</div>
+</div>
+
+</body></html>
