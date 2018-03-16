@@ -1,19 +1,16 @@
 package PageObject;
 
 import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.commands.Find;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
-import java.lang.Object;
+import java.lang.String;
 
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
-
+import static org.testng.Assert.assertEquals;
 
 public class Restaurants {
 
@@ -21,7 +18,7 @@ public class Restaurants {
     private ElementsCollection restaurantsList = $$x("//*[@class ='ui divided items']/div");
     private SelenideElement popularityFilter = $x( "//*[@class='grouped fields']//div[2]//label");
     private SelenideElement filterButton = $x( "//*[@class='ui fluid button']");
-    private ElementsCollection numOfOrdersInfo = $$x("//*[@class ='ui divided items']/div//*[@class='shopping basket  icon']");
+    private ElementsCollection numOfOrdersFullInfo = $$x("//*[@id='divAddRestaurantViewLine']/div/div/div[2]/div/table/tbody/tr[2]/td[2]/span");
 
 
     /**
@@ -38,22 +35,44 @@ public class Restaurants {
         return intNumOfDisplayedRestaurants;
     }
 
-   /* Not finished yet.
+    /**
+     * That method should take values from website, sort them to create expected result, and after that click sorting button on website and compare lists. But it doesn't work, probably because replaceAll method is ignored.
+     */
+   public void checkIfSorted(){
 
-   public void checkifclickable(){
+         List <String> numOfOrdersFullInfoList = numOfOrdersFullInfo.texts();
 
-        ArrayList a = (ArrayList) numOfOrdersInfo.texts();
+        for (int i=0; i<numOfOrdersFullInfo.size(); i++)
+            numOfOrdersFullInfoList.get(i).replaceAll("Ilość złożonych zamówień:", "");
 
-        for (int i=0; i<numOfOrdersInfo.size(); i++){
-            a[i].remove(0, 25);
+       List <Double> numOfOrdersExpected = new ArrayList<>();
 
-        }
+        for (int i=0; i<numOfOrdersFullInfo.size(); i++)
+            numOfOrdersExpected.add(Double.valueOf(numOfOrdersFullInfoList.get(i)));
+
+        numOfOrdersExpected.sort(Comparator.reverseOrder());
+
 
         popularityFilter.click();
         filterButton.click();
 
+        List<String> numOfOrdersOrdered = numOfOrdersFullInfo.texts();
+
+
+       for (int i=0; i<numOfOrdersFullInfo.size(); i++)
+           numOfOrdersOrdered.get(i).replaceAll("Ilość złożonych zamówień:", "");
+
+       List <Double> numOfOrdersOrderedInt = new ArrayList<>();
+
+       for (int i=0; i<numOfOrdersFullInfo.size(); i++)
+           numOfOrdersOrderedInt.add(Double.valueOf(numOfOrdersOrdered.get(i)));
+
+       assertEquals(numOfOrdersExpected, numOfOrdersOrderedInt );
+
+
+
     }
-    */
+
 
 
 }

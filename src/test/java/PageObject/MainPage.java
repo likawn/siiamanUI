@@ -1,27 +1,15 @@
 package PageObject;
 
-import com.codeborne.selenide.Condition.*;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.CollectionCondition;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 import static TemporaryDataProvider.TemporaryDataProvider.baseUrl;
 import static TemporaryDataProvider.TemporaryDataProvider.expectedUrlFromMenuBar;
-import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Condition.present;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.WebDriverRunner.url;
-import static com.codeborne.selenide.WebDriverRunner.webdriverContainer;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 import static org.testng.AssertJUnit.assertEquals;
 
 

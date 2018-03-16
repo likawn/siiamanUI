@@ -25,6 +25,7 @@ public class RestaurantsPageTest extends SetUp{
     @Test
     private void checkHowManyRestaurants(){
         restaurants.getNumOfRestaurants();
+        restaurants.checkifsorted();
 
 
     }
